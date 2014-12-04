@@ -21,13 +21,14 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-
 		connect: {
 			all: {
 				options:{
 					port: 9000,
 					hostname: "0.0.0.0",
-					keepalive:true
+					keepalive:true,
+					base: 'src'
+
 				}
 			}
 		},
@@ -47,8 +48,11 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			files: ['<%= jshint.files %>'],
-			tasks: ['jshint', 'qunit']
+			files: ['<%= jshint.files %>', 'src/*.html'],
+			tasks: ['jshint', 'qunit'],
+			options: { 
+				livereload: true
+			}
 		}
 	});
 
