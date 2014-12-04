@@ -26,7 +26,6 @@ module.exports = function(grunt) {
 				options:{
 					port: 9000,
 					hostname: "0.0.0.0",
-					keepalive:true,
 					base: 'src'
 
 				}
@@ -67,6 +66,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
 	grunt.registerTask('server',[
-		'connect'
+		'connect', 'watch'
 	]);
 };
