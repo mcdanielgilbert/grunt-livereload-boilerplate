@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 			files: ['test/**/*.html']
 		},
 		jshint: {
-			files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+			files: ['Gruntfile.js', 'src/js/*.js', 'test/**/*.js'],
 			options: {
 				// options here to override JSHint defaults
 				globals: {
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			files: ['<%= jshint.files %>', 'src/**/*'],
+			files: ['<%= jshint.files %>', 'src/*','src/css/*'],
 			tasks: ['jshint'],
 			options: { 
 				livereload: true
