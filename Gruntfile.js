@@ -47,8 +47,8 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			files: ['<%= jshint.files %>', 'src/*.html'],
-			tasks: ['jshint', 'qunit'],
+			files: ['<%= jshint.files %>', 'src/**/*'],
+			tasks: ['jshint'],
 			options: { 
 				livereload: true
 			}
