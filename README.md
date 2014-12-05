@@ -1,7 +1,8 @@
 Description
 -----------
 
-A simple nodejs template project with live reload.  Useful for running
+A simple nodejs template project with live reload.  Useful for running tutorial
+and example code.
 
 
 
